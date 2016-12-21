@@ -9,8 +9,13 @@ import {getOrCreateUser} from '../services/oauthService'
 function initOauthMap(confMap, baseUrl) {
   var oauthMap = {}
   for (let k in confMap) {
-    let conf = confMap[k]
-    oauthMap[k] = oauth2(conf)
+    let conf = confMap[k];
+
+    conf.client = 'test';
+
+    console.log('conf', conf);
+
+    oauthMap[k] = oauth2.create(conf)
     let uri = conf.redirectUri
     uri = uri.startsWith('http') ? uri : (baseUrl + uri)
     console.log(uri)

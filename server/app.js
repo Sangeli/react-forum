@@ -3,7 +3,7 @@ import Koa from 'koa'
 import authorize from './middleware/authorize'
 import logger from './middleware/logger'
 import routes from './routes'
-import cclog from 'cclog'
+const cclog = require('cclog');
 import bodyparser from 'koa-bodyparser'
 
 const app = new Koa()

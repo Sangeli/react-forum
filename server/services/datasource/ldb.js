@@ -1,9 +1,10 @@
 import {getMutex} from '../../commons/mutex'
 import trace from '../../commons/decorators/trace'
 
-import LevelUp from 'levelup'
+//import LevelUp from 'levelup'
 // import Promise from 'bluebird'
-var Promise = require('bluebird')
+var Promise = require('bluebird');
+var LevelUp = require('levelup');
 
 // TODO bluebird promisifyAll not works.
 // const MyLevelUp = Promise.promisifyAll(LevelUp)

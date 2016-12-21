@@ -1,5 +1,5 @@
 import Promise from 'bluebird'
-import Github from 'github-api'
+const Github = require('github-api');
 
 export const getProfile = (access_token) => {
   var github = new Github({

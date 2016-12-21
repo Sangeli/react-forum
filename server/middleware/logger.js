@@ -1,4 +1,5 @@
-import cclog from 'cclog'
+//import cclog from 'cclog'
+const cclog = require('cclog');
 
 export default () => {
   return async (ctx, next) => {
